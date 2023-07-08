@@ -1,0 +1,180 @@
+
+.navbar {
+    width:845px;
+    height:177px;
+    box-shadow: 0px 12px 22px 0px #0000000A;
+    border-radius: 2px 2px 20px 20px;
+    left:380px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.vest {
+    text-transform: capitalize;
+    color:#0800A5;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left:360px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.pxt {
+    display:block;
+    //  margin:150px;
+    //  margin-top: -15px;
+    
+}
+
+.imgone {    
+}
+
+.secondimg {
+    margin-left: 150px;
+}
+
+.imgthree {
+    float:right;
+    margin-top:-26px;
+}
+
+.mobview {
+    display:none;
+}
+
+.contained {
+    padding-left:220px;
+    
+}
+
+.form-inline .form-group {
+    margin:0 auto;
+    padding:25px;
+    // margin: 0 auto;
+    // padding:10px;
+    // width:800px;   
+}
+
+input {
+    gap:30px;
+}
+
+
+div.container h4 {
+text-transform: uppercase;
+}
+
+
+label {
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+span.aster {
+    color:red;
+}
+
+p.form-check-label {
+    color: #101828;
+    font-weight:400;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.backg {
+    background: #F9FAFB;
+    padding: 10px 18px;
+    height:60px;
+    width:1200px;
+}
+
+.prev {
+    background: #fff;
+    color:#0800A5;
+    border-radius:6px;
+    border:none;
+    padding:9px 17px;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.nxt {
+  background: #0800A5;
+  color:#fff;
+  border-radius: 6px;
+  padding:7px 20px;
+  border:none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.prev:hover {
+    background: #0800A5;
+    color:#fff;
+}
+
+.nxt:hover {
+    color:blue;
+    background: yellow;
+}
+
+
+@media (max-width:500px) {
+
+    .navbar {
+        display:none;
+    }
+
+    .vest {
+        display:none;
+    }
+
+    .pxt {
+        display:none;
+        
+    }
+
+    .mobview {
+        display:block;
+        padding: 20px;
+    }
+
+     .grid-container {
+        display: grid;
+        grid-template-columns: 5rem 5rem;
+        // grid-gap:-40px;
+     }
+
+     .grid-container .grid-child p {
+         color:#0800A5;
+         font-size: 18px;
+         text-transform: capitalize;
+         font-weight: 700;
+         font-family: 'Nunito Sans', sans-serif;
+     }
+
+     div.container img {
+        width:93%;
+     }
+
+    .contained {
+        padding-left:2px;
+        flex-direction: row;   
+    }
+
+    div.container h4 {
+        font-size: 18px;
+        white-space: nowrap;
+        }
+    
+        label.genz {
+            white-space: nowrap;
+            
+        }    
+}
