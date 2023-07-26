@@ -87,15 +87,6 @@
               formControlName="occupation"
             />
           </div>
-          <div class="col-md-5 col-12">
-            <label>Postal<span class="aster">*</span></label>
-            <input
-              type="text"
-              id="Surname"
-              class="form-control"
-              formControlName="postal"
-            />
-          </div>
         </div>
 
         <div class="row mb-4">
@@ -147,6 +138,8 @@
               <option selected >Select</option>
               <option value="NIN">NIN</option>
               <option value="Driver's licence">Driver's licence</option>
+              <option value="Driver's licence">Voters card</option>
+              <option value="Driver's licence">Passport</option>
             </select>
           </div>
         </div>
@@ -229,15 +222,7 @@
                 formControlName="j_occupation"
               />
             </div>
-            <div class="col-md-5 col-12">
-              <label>Postal<span class="aster">*</span></label>
-              <input
-                type="text"
-                id="Surname"
-                class="form-control"
-                formControlName="j_postal"
-              />
-            </div>
+      
           </div>
 
           <div class="row mb-4">
@@ -548,6 +533,70 @@
                   value="365 days"
                 />
                 <p class="form-check-label" for="flexRadioDefault1">365 days</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id="flexRadioDefault1"
+                  formControlName="investment"
+                  value="Strong Room"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  Strong Room
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="36 months"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">36 months</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id="flexRadioDefault1"
+                  formControlName="investment"
+                  value="Moni Matter"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  Moni Matter
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="36 months"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">36 months</p>
               </div>
             </div>
           </div>
