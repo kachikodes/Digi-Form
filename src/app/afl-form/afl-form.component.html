@@ -1,378 +1,577 @@
- <nav class="navbar bg-body-white ">
-    <div class="container">
-        <div class="row">
-            <p class="vest">investment</p> 
-               <div class="pxt">
-               <img src="../../assets/img/Finance 1.svg" class="imgone">
-                <img src="../../assets/img/next slide.svg" class="secondimg">
-               <img src="../../assets/img/owo odun.svg" class="imgthree"> 
-           </div> 
-            </div>
-       </div>      
+<nav class="navbar bg-body-white">
+  <div class="container">
+    <div class="row">
+      <p class="vest">investment</p>
+      <div class="pxt">
+        <img src="../../assets/img/Finance 1.svg" class="imgone" />
+        <img src="../../assets/img/next slide.svg" class="secondimg" />
+        <img src="../../assets/img/owo odun.svg" class="imgthree" />
+      </div>
+    </div>
+  </div>
 </nav>
 
 <div class="mobview">
-    <div class="grid-container">
-        <div class="grid-child">
-            <img src="../../assets/img/mobile finance.svg">
-        </div>
-        <div class="grid-child">
-            <p>investment</p>
-        </div>
+  <div class="grid-container">
+    <div class="grid-child">
+      <img src="../../assets/img/mobile finance.svg" />
     </div>
+    <div class="grid-child">
+      <p>investment</p>
+    </div>
+  </div>
 
-    <div class="container">
-        <img src="../../assets/img/Frame 1000003358.svg">
-    </div>
+  <div class="container">
+    <img src="../../assets/img/Frame 1000003358.svg" />
+  </div>
 </div>
- 
+
 <section>
-    <div class="contained">
-        <!-- <div class="row mb-5">
+  <div class="contained">
+    <!-- <div class="row mb-5">
             <div class="col">1</div>
             <div class="col">2</div>
         </div> -->
-        <form class="form-inline" role="form">
-            <div class="form-group">
-         <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Surname <span class="aster">*</span></label>
-                <input type="text" id="Surname" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>Middlename <span class="aster">*</span></label>
-                <input type="text" id="Surname" class="form-control" required />
-            </div>
-        </div> 
+    <form class="form-inline" role="form" [formGroup]="feedbackForm">
+      <!--   -->
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-5 col-12">
+            <label>Surname <span class="aster">*</span></label>
+            <input
+              type="text"
+              id="Surname"
+              class="form-control"
+              formControlName="surname"
+            />
+          </div>
+          <div class="col-md-5 col-12">
+            <label>Middlename <span class="aster">*</span></label>
+            <input
+              type="text"
+              id="Surname"
+              class="form-control"
+              formControlName="mname"
+            />
+          </div>
+        </div>
 
         <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>First Name <span class="aster">*</span></label>
-                <input type="text" id="Surname" class="form-control" required />
+          <div class="col-md-5 col-12">
+            <label>First Name <span class="aster">*</span></label>
+            <input
+              type="text"
+              id="Surname"
+              class="form-control"
+              formControlName="fname"
+            />
+          </div>
+          <div class="col-md-5 col-12">
+            <label>Date of Birth<span class="aster">*</span></label>
+            <input
+              type="date"
+              id="Surname"
+              class="form-control"
+              formControlName="dob"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-5 col-12">
+            <label>Occupation <span class="aster">*</span></label>
+            <input
+              type="text"
+              id="Surname"
+              class="form-control"
+              formControlName="occupation"
+            />
+          </div>
+          <div class="col-md-5 col-12">
+            <label>Postal<span class="aster">*</span></label>
+            <input
+              type="text"
+              id="Surname"
+              class="form-control"
+              formControlName="postal"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-10 col-12">
+            <label>Residential Address<span class="aster">*</span></label>
+            <input
+              type="text"
+              id="address"
+              class="form-control"
+              formControlName="raddress"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-5 col-12">
+            <label>Email <span class="aster">*</span></label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+          <div class="col-md-5 col-12">
+            <label>Phone Number<span class="aster">*</span></label>
+            <input
+              type="tel"
+              id="phone_no"
+              class="form-control"
+              formControlName="phone_no"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-10 col-12">
+            <label>Bank Verification Number <span class="aster">*</span></label>
+            <input
+              type="tel"
+              id="bvn"
+              class="form-control"
+              formControlName="bvn"
+            />
+          </div>
+          <div class="col-md-10 col-12">
+            <label>Identification Type<span class="aster">*</span></label>
+            <select class="form-select" formControlName="identification">
+              <option selected >Select</option>
+              <option value="NIN">NIN</option>
+              <option value="Driver's licence">Driver's licence</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-10 col-12">
+            <label>Identification Number <span class="aster">*</span></label>
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              formControlName="identification_no"
+            />
+          </div>
+          <div class="col-md-10 col-12">
+            <label>Upload Passport<span class="aster">*</span></label>
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupFile02"
+              formControlName="passport"
+            />
+          </div>
+        </div>
+
+        <div class="container mb-5">
+          <h4>joint investment or trust details</h4>
+        </div>
+
+        <div class="row">
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Surname <span class="aster">*</span></label>
+              <input
+                type="text"
+                id="Surname"
+                class="form-control"
+                formControlName="j_surname"
+              />
             </div>
             <div class="col-md-5 col-12">
-                <label>Date of Birth<span class="aster">*</span></label>
-                <input type="date" id="Surname" class="form-control" required />
+              <label>Middlename <span class="aster">*</span></label>
+              <input
+                type="text"
+                id="Surname"
+                class="form-control"
+                formControlName="j_mname"
+              />
             </div>
-        </div> 
-
-        <div class="row mb-4">
-          <div class="col-sm-5 col-12">
-                <label>Occupation <span class="aster">*</span></label>
-                <input type="text" id="Surname" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>Postal<span class="aster">*</span></label>
-                <input type="text" id="Surname" class="form-control" required />
-            </div>
-        </div>
-        
-        <div class="row mb-4">
-            <div class="col-sm-10 col-12">
-                <label>Residential Address<span class="aster">*</span></label>
-                <input type="text" id="address" class="form-control" required />
-            </div>
-        </div> 
-
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Email  <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>Phone Number<span class="aster">*</span></label>
-                <input type="number" id="phone-no" class="form-control" required />
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Bank Verification Number <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
-            </div>
-            <div class="col sm-5 col-12">
-                <label>Identification Type<span class="aster">*</span></label>
-                <select class="form-select"> 
-                    <option value="">Select</option>
-                    <option value="">NIN</option>
-                    <option value="">Driver's licence</option>
-                </select>   
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col sm-5 col-12">
-                <label>Identification Number <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
-            </div>
-            <div class="col sm-5 col-12">
-                <label>Upload Passport<span class="aster">*</span></label>
-                <input type="file" class="form-control" id="inputGroupFile02">
-            </div>
-        </div>
-
-          <div class="container mb-5">
-            <h4>joint investment or trust details</h4>
           </div>
-           
-          <div class="row">
-            <div class="row mb-4">
-                <div class="col-sm-5 col-12">
-                    <label>Surname <span class="aster">*</span></label>
-                    <input type="text" id="Surname" class="form-control" required />
-                </div>
-                <div class="col-sm-5 col-12">
-                    <label>Middlename <span class="aster">*</span></label>
-                    <input type="text" id="Surname" class="form-control" required />
-                </div>
-            </div>
 
-            <div class="row mb-4">
-                <div class="col-sm-5 col-12">
-                    <label>First Name <span class="aster">*</span></label>
-                    <input type="text" id="Surname" class="form-control" required />
-                </div>
-                <div class="col-md-5 col-12">
-                    <label>Date of Birth<span class="aster">*</span></label>
-                    <input type="date" id="Surname" class="form-control" required />
-                </div>
-            </div> 
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>First Name <span class="aster">*</span></label>
+              <input
+                type="text"
+                id="Surname"
+                class="form-control"
+                formControlName="j_fname"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>Date of Birth<span class="aster">*</span></label>
+              <input
+                type="date"
+                id="Surname"
+                class="form-control"
+                formControlName="j_dob"
+              />
+            </div>
+          </div>
 
-            <div class="row mb-4">
-                <div class="col-sm-5 col-12">
-                      <label>Occupation <span class="aster">*</span></label>
-                      <input type="text" id="Surname" class="form-control" required />
-                  </div>
-                  <div class="col-sm-5 col-12">
-                      <label>Postal<span class="aster">*</span></label>
-                      <input type="text" id="Surname" class="form-control" required />
-                  </div>
-              </div>
-
-              <div class="row mb-4">
-                <div class="col-sm-5 col-12">
-                      <label>Occupation <span class="aster">*</span></label>
-                      <input type="text" id="Surname" class="form-control" required />
-                  </div>
-                  <div class="col-sm-5 col-12">
-                      <label>Postal<span class="aster">*</span></label>
-                      <input type="text" id="Surname" class="form-control" required />
-                  </div>
-              </div>
-              
-              <div class="row mb-4">
-                  <div class="col-sm-10 col-12">
-                      <label>Residential Address<span class="aster">*</span></label>
-                      <input type="text" id="address" class="form-control" required />
-                  </div>
-              </div> 
-
-              <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Email  <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Occupation <span class="aster">*</span></label>
+              <input
+                type="text"
+                id="Surname"
+                class="form-control"
+                formControlName="j_occupation"
+              />
             </div>
-            <div class="col-sm-5 col-12">
-                <label>Phone Number<span class="aster">*</span></label>
-                <input type="number" id="phone-no" class="form-control" required />
+            <div class="col-md-5 col-12">
+              <label>Postal<span class="aster">*</span></label>
+              <input
+                type="text"
+                id="Surname"
+                class="form-control"
+                formControlName="j_postal"
+              />
             </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Bank Verification Number <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
-            </div>
-            <div class="col sm-5 col-12">
-                <label>Identification Type<span class="aster">*</span></label>
-                <select class="form-select"> 
-                    <option value="">Select</option>
-                    <option value="">NIN</option>
-                    <option value="">Driver's licence</option>
-                </select>   
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col sm-5 col-12">
-                <label>Identification Number <span class="aster">*</span></label>
-                <input type="text" id="email" class="form-control" required />
-            </div>
-            <div class="col sm-5 col-12">
-                <label>Relationship<span class="aster">*</span></label>
-                <input type="text" class="form-control" id="inputGroupFile02">
-            </div>
-        </div>
-
-
-        <div class="row mb-4">
-            <div class="col sm-5 col-12 mb-3">
-                <label>Signatory <span class="aster">*</span></label>
-                <input type="file" id="email" class="form-control" required />
-            </div>
-            <div class="col sm-5 col-12">
-                <label>Upload Passport<span class="aster">*</span></label>
-                <input type="file" class="form-control" id="inputGroupFile02">
-            </div>
-        </div>
-
-        <div class="container mb-4">
-            <h4>company details</h4>
-        </div>
- 
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Company Name<span class="aster">*</span></label>
-                <input type="text" id="name" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>RC Number<span class="aster">*</span></label>
-                <input type="number" id="phonE-NO" class="form-control" required />
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Date of Registration<span class="aster">*</span></label>
-                <input type="text" id="name" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>Postal address<span class="aster">*</span></label>
-                <input type="number" id="phonE-NO" class="form-control" required />
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>Date of Registration<span class="aster">*</span></label>
-                <input type="text" id="name" class="form-control" required />
-            </div>
-            <div class="col-sm-5 col-12">
-                <label>Postal address<span class="aster">*</span></label>
-                <input type="number" id="phonE-NO" class="form-control" required />
-            </div>
-        </div>
+          </div>
 
           <div class="row mb-4">
             <div class="col-sm-10 col-12">
-                <label>Residential Address<span class="aster">*</span></label>
-                <input type="text" id="address" class="form-control" required />
+              <label>Residential Address<span class="aster">*</span></label>
+              <input
+                type="text"
+                id="address"
+                class="form-control"
+                formControlName="j_address"
+              />
             </div>
-        </div> 
+          </div>
 
-        <div class="row mb-4">
-            <div class="col-sm-5 col-12">
-                <label>BVN<span class="aster">*</span></label>
-                <input type="number" id="no" class="form-control" required />
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Email <span class="aster">*</span></label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                formControlName="j_email"
+              />
             </div>
-        </div>
+            <div class="col-md-5 col-12">
+              <label>Phone Number<span class="aster">*</span></label>
+              <input
+                type="tel"
+                id="phone_no"
+                class="form-control"
+                formControlName="j_phone_no"
+              />
+            </div>
+          </div>
 
-           <div class="container mb-4">
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label
+                >Bank Verification Number <span class="aster">*</span></label
+              >
+              <input
+                type="tel"
+                id="email"
+                class="form-control"
+                formControlName="j_bvn"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>Identification Type<span class="aster">*</span></label>
+              <select class="form-select" formControlName="j_identification">
+                <option selected >Select</option>
+                <option value="NIN">NIN</option>
+                <option value="Driver's licence">Driver's licence</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-md-5 col-12">
+              <label>Identification Number <span class="aster">*</span></label>
+              <input
+                type="tel"
+                id="email"
+                class="form-control"
+                formControlName="j_identification_no"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>Relationship<span class="aster">*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputGroupFile02"
+                formControlName="j_relationship"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-5 col-12 mb-3">
+              <label>Signatory <span class="aster">*</span></label>
+              <input
+                type="file"
+                id="email"
+                class="form-control"
+                formControlName="j_signatory"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>Upload Passport<span class="aster">*</span></label>
+              <input
+                type="file"
+                class="form-control"
+                id="inputGroupFile02"
+                formControlName="j_passport"
+              />
+            </div>
+          </div>
+
+          <div class="container mb-4">
+            <h4>company details</h4>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Company Name<span class="aster">*</span></label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                formControlName="c_company_name"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>RC Number<span class="aster">*</span></label>
+              <input
+                type="tel"
+                id="phonE_no"
+                class="form-control"
+                formControlName="j_rc_no"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Date of Registration<span class="aster">*</span></label>
+              <input
+                type="date"
+                id="name"
+                class="form-control"
+                formControlName="c_dor"
+              />
+            </div>
+            <div class="col-md-5 col-12">
+              <label>Postal address<span class="aster">*</span></label>
+              <input
+              type="text"
+                id="phonE_no"
+                class="form-control"
+                formControlName="c_postal"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-10 col-12">
+              <label>Residential Address<span class="aster">*</span></label>
+              <input
+                type="text"
+                id="address"
+                class="form-control"
+                formControlName="c_residential"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>BVN<span class="aster">*</span></label>
+              <input
+              type="tel"
+                id="no"
+                class="form-control"
+                formControlName="c_bvn"
+              />
+            </div>
+          </div>
+
+          <div class="container mb-4">
             <h4>investment instruction</h4>
-           </div>
+          </div>
 
-           <div class="row mb-4">
+          <div class="row mb-4">
             <div class="col-sm-4 col-7">
-                <label class="genz">Type of Investment<span class="aster">*</span></label>
+              <label class="genz"
+                >Type of Investment<span class="aster">*</span></label
+              >
             </div>
             <div class="col-sm-4 col-5">
-                <label>Tenure<span class="aster"> *</span></label>
+              <label>Tenure<span class="aster"> *</span></label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id=""
+                  value="Altron Investment"
+                  formControlName="investment"
+                  checked
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  Altron Investment
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="60 days"
+                  checked
+                />
+                <p class="form-check-label" for="flexRadioDefault1">60 days</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id="flexRadioDefault1"
+                  formControlName="investment"
+                  value="Prestige Education"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  Prestige Education
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="90 days"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">90 days</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id="flexRadioDefault1"
+                  formControlName="investment"
+                  value="Fixed Income Investment"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  Fixed Income Investment
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="180 days"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">180 days</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-sm-4 col-7">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="investment"
+                  id="flexRadioDefault1"
+                  formControlName="investment"
+                  value="High Income Investment"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">
+                  High Income Investment
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-5">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tenure"
+                  id="flexRadioDefault"
+                  formControlName="tenure"
+                  value="365 days"
+                />
+                <p class="form-check-label" for="flexRadioDefault1">365 days</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-md-10 col-12">
+              <div class="backg move-right">
+                <div class="space-me">
+                  <button type="button" class="prev btn btn-lg" disabled>
+                    Previous
+                  </button>
+                  <button
+                  (click)="onNext()"
+                    type="button"
+                    class="nxt btn btn-lg"
+                  >
+                    Next
+                  </button>
                 </div>
               </div>
-
-              <div class="row mb-3">
-                <div class="col-sm-4 col-7">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <p class="form-check-label" for="flexRadioDefault1">
-                          Altron Investment
-                        </p>
-                      </div> </div>
-
-                      <div class="col-sm-4 col-5">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <p class="form-check-label" for="flexRadioDefault1">
-                              60 days
-                            </p>
-                          </div></div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-sm-4 col-7">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <p class="form-check-label" for="flexRadioDefault1">
-                                  Prestige Education
-                                </p>
-                              </div> </div>
-        
-                              <div class="col-sm-4 col-5">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <p class="form-check-label" for="flexRadioDefault1">
-                                      90 days
-                                    </p>
-                                  </div></div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-sm-4 col-7">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <p class="form-check-label" for="flexRadioDefault1">
-                                          Fixed Income Investment
-                                        </p>
-                                      </div> </div>
-                
-                                      <div class="col-sm-4 col-5">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <p class="form-check-label" for="flexRadioDefault1">
-                                              180 days
-                                            </p>
-                                          </div></div>
-                                    </div>
-
-                                    <div class="row mb-5">
-                                        <div class="col-sm-4 col-7">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                <p class="form-check-label" for="flexRadioDefault1">
-                                                  High Income Investment
-                                                </p>
-                                              </div> </div>
-                        
-                                              <div class="col-sm-4 col-5">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                    <p class="form-check-label" for="flexRadioDefault1">
-                                                      365 days
-                                                    </p>
-                                                  </div></div>
-                                            </div>
-
-                                        <div class="backg">
-                                            <div class="row">
-                                                <div class="col">
-                                                   <input type="button" class="prev" value="Previous">
-                                                </div>
-                                                <div class="col">
-                                                    <input type="button" routerLink="/afl-two" class="nxt" value="Next">
-                                                </div>
-                                            </div>
-                                        </div>    
- 
-
+            </div>
           </div>
         </div>
-        </form>
-    </div>
+      </div>
+    </form>
+  </div>
 </section>
-
-
-
-
-
-
-
