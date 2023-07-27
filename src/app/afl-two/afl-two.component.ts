@@ -1036,7 +1036,7 @@ Altron Investment:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+Investment Amount:
 </td>
 <td
   style="
@@ -1045,7 +1045,7 @@ Altron Investment:
     color: #455056;
   "
 >
-[Email]
+[i_amount]
 </td>
 </tr>
 
@@ -1060,7 +1060,7 @@ Altron Investment:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+Payment Amount:
 </td>
 <td
   style="
@@ -1069,7 +1069,7 @@ Altron Investment:
     color: #455056;
   "
 >
-[Email]
+[p_amount]
 </td>
 </tr>
 
@@ -1084,7 +1084,7 @@ Altron Investment:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+Payment Frequency:
 </td>
 <td
   style="
@@ -1093,7 +1093,7 @@ Altron Investment:
     color: #455056;
   "
 >
-[Email]
+[p_frequency]
 </td>
 </tr>
 
@@ -1108,7 +1108,7 @@ Altron Investment:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+Account Name:
 </td>
 <td
   style="
@@ -1117,7 +1117,223 @@ Altron Investment:
     color: #455056;
   "
 >
-[Email]
+[acc]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Bank Name:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[acc_name]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Account Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[acc_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Pick from our office:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[means]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Name:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_name]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Phone Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_phone_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Residential Address:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_address]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Percentage:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  " 
+>
+[Percentage (%)]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Residential Address:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_address]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Residential Address:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_address]
 </td>
 </tr>
 
