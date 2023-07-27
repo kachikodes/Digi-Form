@@ -1300,7 +1300,7 @@ Percentage:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Residential Address:
+Customer Signature & Date:
 </td>
 <td
   style="
@@ -1309,7 +1309,7 @@ Residential Address:
     color: #455056;
   "
 >
-[b_address]
+[c_sign]
 </td>
 </tr>
 
@@ -1324,7 +1324,7 @@ Residential Address:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Residential Address:
+Authorized Signature & Date:
 </td>
 <td
   style="
@@ -1333,9 +1333,10 @@ Residential Address:
     color: #455056;
   "
 >
-[b_address]
+[a_sign]
 </td>
 </tr>
+
 
 </tbody>
 </table>
