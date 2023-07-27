@@ -940,7 +940,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+  BVN:
 </td>
 <td
   style="
@@ -949,7 +949,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Email]
+[c_bvn]
 </td>
 </tr>
 
@@ -964,7 +964,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+  Residential Address:
 </td>
 <td
   style="
@@ -973,7 +973,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Email]
+[c_residential]
 </td>
 </tr>
 
@@ -988,7 +988,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+Altron Investment:
 </td>
 <td
   style="
@@ -997,7 +997,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Email]
+[investment]
 </td>
 </tr>
 
@@ -1012,7 +1012,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+  60 days:
 </td>
 <td
   style="
@@ -1021,7 +1021,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Email]
+[tenure]
 </td>
 </tr>
 

@@ -28,6 +28,15 @@
 
 <section>
   <div class="contained">
+    <div class="grid-containerx">
+      <div class="grid-child">
+        <img src="../../assets/img/arrow-down.svg" routerLink="/afl-form" />
+      </div>
+      <div class="grid-child">
+        <h6>Personal Details</h6>
+        <div><p>Tell us something about you</p></div>
+      </div>
+    </div>
     <!-- <div class="row mb-5">
             <div class="col">1</div>
             <div class="col">2</div>
@@ -78,6 +87,18 @@
         </div>
 
         <div class="row mb-4">
+          <div class="col-md-10 col-12">
+            <label>Residential Address<span class="aster">*</span></label>
+            <input
+              type="text"
+              id="address"
+              class="form-control"
+              formControlName="raddress"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-4">
           <div class="col-md-5 col-12">
             <label>Occupation <span class="aster">*</span></label>
             <input
@@ -87,16 +108,14 @@
               formControlName="occupation"
             />
           </div>
-        </div>
 
-        <div class="row mb-4">
-          <div class="col-md-10 col-12">
-            <label>Residential Address<span class="aster">*</span></label>
+          <div class="col-md-5 col-12">
+            <label>Phone Number<span class="aster">*</span></label>
             <input
-              type="text"
-              id="address"
+              type="tel"
+              id="phone_no"
               class="form-control"
-              formControlName="raddress"
+              formControlName="phone_no"
             />
           </div>
         </div>
@@ -112,19 +131,7 @@
             />
           </div>
           <div class="col-md-5 col-12">
-            <label>Phone Number<span class="aster">*</span></label>
-            <input
-              type="tel"
-              id="phone_no"
-              class="form-control"
-              formControlName="phone_no"
-            />
-          </div>
-        </div>
-
-        <div class="row mb-4">
-          <div class="col-md-10 col-12">
-            <label>Bank Verification Number <span class="aster">*</span></label>
+            <label>Bank Verification Number<span class="aster">*</span></label>
             <input
               type="tel"
               id="bvn"
@@ -132,7 +139,10 @@
               formControlName="bvn"
             />
           </div>
-          <div class="col-md-10 col-12">
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-5 col-12">
             <label>Identification Type<span class="aster">*</span></label>
             <select class="form-select" formControlName="identification">
               <option selected >Select</option>
@@ -142,10 +152,8 @@
               <option value="Driver's licence">Passport</option>
             </select>
           </div>
-        </div>
 
-        <div class="row mb-5">
-          <div class="col-md-10 col-12">
+          <div class="col-md-5 col-12">
             <label>Identification Number <span class="aster">*</span></label>
             <input
               type="text"
@@ -154,6 +162,9 @@
               formControlName="identification_no"
             />
           </div>
+        </div>
+
+        <div class="row mb-5">
           <div class="col-md-10 col-12">
             <label>Upload Passport<span class="aster">*</span></label>
             <input
@@ -212,18 +223,6 @@
             </div>
           </div>
 
-          <div class="row mb-4">
-            <div class="col-md-5 col-12">
-              <label>Occupation <span class="aster">*</span></label>
-              <input
-                type="text"
-                id="Surname"
-                class="form-control"
-                formControlName="j_occupation"
-              />
-            </div>
-      
-          </div>
 
           <div class="row mb-4">
             <div class="col-sm-10 col-12">
@@ -239,12 +238,12 @@
 
           <div class="row mb-4">
             <div class="col-md-5 col-12">
-              <label>Email <span class="aster">*</span></label>
+              <label>Occupation <span class="aster">*</span></label>
               <input
-                type="email"
-                id="email"
+                type="text"
+                id="Surname"
                 class="form-control"
-                formControlName="j_email"
+                formControlName="j_occupation"
               />
             </div>
             <div class="col-md-5 col-12">
@@ -256,9 +255,19 @@
                 formControlName="j_phone_no"
               />
             </div>
-          </div>
+      </div>
+          
 
           <div class="row mb-4">
+            <div class="col-md-5 col-12">
+              <label>Email <span class="aster">*</span></label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                formControlName="j_email"
+              />
+            </div>
             <div class="col-md-5 col-12">
               <label
                 >Bank Verification Number <span class="aster">*</span></label
@@ -270,6 +279,9 @@
                 formControlName="j_bvn"
               />
             </div>
+          </div>
+
+          <div class="row mb-4">
             <div class="col-md-5 col-12">
               <label>Identification Type<span class="aster">*</span></label>
               <select class="form-select" formControlName="j_identification">
@@ -278,9 +290,7 @@
                 <option value="Driver's licence">Driver's licence</option>
               </select>
             </div>
-          </div>
 
-          <div class="row mb-5">
             <div class="col-md-5 col-12">
               <label>Identification Number <span class="aster">*</span></label>
               <input
@@ -290,7 +300,10 @@
                 formControlName="j_identification_no"
               />
             </div>
-            <div class="col-md-5 col-12">
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-10 col-12">
               <label>Relationship<span class="aster">*</span></label>
               <input
                 type="text"
@@ -358,12 +371,12 @@
               />
             </div>
             <div class="col-md-5 col-12">
-              <label>Postal address<span class="aster">*</span></label>
+              <label>BVN<span class="aster">*</span></label>
               <input
-              type="text"
-                id="phonE_no"
+              type="tel"
+                id="no"
                 class="form-control"
-                formControlName="c_postal"
+                formControlName="c_bvn"
               />
             </div>
           </div>
@@ -376,18 +389,6 @@
                 id="address"
                 class="form-control"
                 formControlName="c_residential"
-              />
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="col-md-5 col-12">
-              <label>BVN<span class="aster">*</span></label>
-              <input
-              type="tel"
-                id="no"
-                class="form-control"
-                formControlName="c_bvn"
               />
             </div>
           </div>
@@ -505,7 +506,7 @@
             </div>
           </div>
 
-          <div class="row mb-5">
+          <div class="row mb-3">
             <div class="col-sm-4 col-7">
               <div class="form-check">
                 <input
@@ -537,7 +538,7 @@
             </div>
           </div>
 
-          <div class="row mb-5">
+          <div class="row mb-3">
             <div class="col-sm-4 col-7">
               <div class="form-check">
                 <input
