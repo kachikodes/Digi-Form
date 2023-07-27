@@ -285,11 +285,6 @@ export class AflTwoComponent implements OnInit {
                           </td>
                         </tr>
 
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-
                   <tr>
                   <td
                     style="
@@ -320,35 +315,6 @@ export class AflTwoComponent implements OnInit {
           </tr>
 
           <tr>
-          <td
-            style="
-              padding: 10px;
-              border-bottom: 1px solid #ededed;
-              border-right: 1px solid #ededed;
-              width: 35%;
-              font-weight: 500;
-              color: rgba(0, 0, 0, 0.64);
-            "
-          >
-            Occupation:
-          </td>
-          <td
-            style="
-              padding: 10px;
-              border-bottom: 1px solid #ededed;
-              color: #455056;
-            "
-          >
-          [Occupation]
-          </td>
-        </tr>
-
-        </tbody>
-      </table>
-    </td>
-  </tr>
-
-  <tr>
   <td
     style="
       padding: 10px;
@@ -372,10 +338,54 @@ export class AflTwoComponent implements OnInit {
   </td>
 </tr>
 
-</tbody>
-</table>
-</td>
-</tr>
+          <tr>
+          <td
+            style="
+              padding: 10px;
+              border-bottom: 1px solid #ededed;
+              border-right: 1px solid #ededed;
+              width: 35%;
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.64);
+            "
+          >
+            Occupation:
+          </td>
+          <td
+            style="
+              padding: 10px;
+              border-bottom: 1px solid #ededed;
+              color: #455056;
+            "
+          >
+          [Occupation]
+          </td>
+        </tr>
+
+        <tr>
+        <td
+          style="
+            padding: 10px;
+            border-bottom: 1px solid #ededed;
+            border-right: 1px solid #ededed;
+            width: 35%;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.64);
+          "
+        >
+          Phone Number:
+        </td>
+        <td
+          style="
+            padding: 10px;
+            border-bottom: 1px solid #ededed;
+            color: #455056;
+          "
+        >
+        [Phone Number]
+        </td>
+        </tr>
+
 
 <tr>
 <td
@@ -398,30 +408,6 @@ export class AflTwoComponent implements OnInit {
   "
 >
 [Email]
-</td>
-</tr>
-
-<tr>
-<td
-  style="
-    padding: 10px;
-    border-bottom: 1px solid #ededed;
-    border-right: 1px solid #ededed;
-    width: 35%;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.64);
-  "
->
-  Phone Number:
-</td>
-<td
-  style="
-    padding: 10px;
-    border-bottom: 1px solid #ededed;
-    color: #455056;
-  "
->
-[Phone Number]
 </td>
 </tr>
 
@@ -628,30 +614,6 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Occupation:
-</td>
-<td
-  style="
-    padding: 10px;
-    border-bottom: 1px solid #ededed;
-    color: #455056;
-  "
->
-[j_occupation]
-</td>
-</tr>
-
-<tr>
-<td
-  style="
-    padding: 10px;
-    border-bottom: 1px solid #ededed;
-    border-right: 1px solid #ededed;
-    width: 35%;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.64);
-  "
->
   Residential Address:
 </td>
 <td
@@ -676,7 +638,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  Email:
+  Occupation:
 </td>
 <td
   style="
@@ -685,7 +647,7 @@ Identification Number:
     color: #455056;
   "
 >
-[j_email]
+[j_occupation]
 </td>
 </tr>
 
@@ -710,6 +672,30 @@ Identification Number:
   "
 >
 [j_phone_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_email]
 </td>
 </tr>
 
@@ -1377,7 +1363,51 @@ Authorized Signature & Date:
 
   getData() {
     return this.email
-      .replace('[Appointment ID]', 'Sivuyile Magutywa')
-      .replace('[your_name]', 'Paul Dean');
+      .replace('[surname]', 'Sivuyile Magutywa')
+      .replace('[fname]', 'Paul Dean')
+      .replace('[dob]', 'Paul Dean')
+      .replace('[raddress]', 'Paul Dean')
+      .replace('[occupation]', 'Paul Dean')
+      .replace('[phone_no]', 'Paul Dean')
+      .replace('[email]', 'Paul Dean')
+      .replace('[bvn]', 'Paul Dean')
+      .replace('[identification]', 'Paul Dean')
+      .replace('[identification_no]', 'Paul Dean')
+      .replace('[passport]', 'Paul Dean')
+      .replace('[j_surname]', 'Paul Dean')
+      .replace('[j_mname]', 'Paul Dean')
+      .replace('[j_fname]', 'Paul Dean')
+      .replace('[j_dob]', 'Paul Dean')
+      .replace('[j_address]', 'Paul Dean')
+      .replace('[j_occupation]', 'Paul Dean')
+      .replace('[j_phone_no]', 'Paul Dean')
+      .replace('[j_email]', 'Paul Dean')
+      .replace('[j_bvn]', 'Paul Dean')
+      .replace('[j_identification]', 'Paul Dean')
+      .replace('[j_identification_no]', 'Paul Dean')
+      .replace('[j_relationship]', 'Paul Dean')
+      .replace('[j_signatory]', 'Paul Dean')
+      .replace('[j_passport]', 'Paul Dean')
+      .replace('[c_company_name]', 'Paul Dean')
+      .replace('[j_rc_no]', 'Paul Dean')
+      .replace('[c_dor]', 'Paul Dean')
+      .replace('[c_bvn]', 'Paul Dean')
+      .replace('[c_residential]', 'Paul Dean')
+      .replace('[investment]', 'Paul Dean')
+      .replace('[tenure]', 'Paul Dean')
+      .replace('[i_amount]', 'Paul Dean')
+      .replace('[p_amount]', 'Paul Dean')
+      .replace('[p_frequency]', 'Paul Dean')
+      .replace('[option]', 'Paul Dean')
+      .replace('[acc]', 'Paul Dean')
+      .replace('[acc_name]', 'Paul Dean')
+      .replace('[acc_no]', 'Paul Dean')
+      .replace('[means]', 'Paul Dean')
+      .replace('[b_name]', 'Paul Dean')
+      .replace('[b_phone_no]', 'Paul Dean')
+      .replace('[b_address]', 'Paul Dean')
+      .replace('[b_percentage]', 'Paul Dean')
+      .replace('[c_sign]', 'Paul Dean')
+      .replace('[a_sign]', 'Paul Dean');
   }
 }
