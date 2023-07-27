@@ -261,10 +261,871 @@ export class AflTwoComponent implements OnInit {
                             </td>
                           </tr>
                           
+                          <tr>
+                          <td
+                            style="
+                              padding: 10px;
+                              border-bottom: 1px solid #ededed;
+                              border-right: 1px solid #ededed;
+                              width: 35%;
+                              font-weight: 500;
+                              color: rgba(0, 0, 0, 0.64);
+                            "
+                          >
+                            First Name:
+                          </td>
+                          <td
+                            style="
+                              padding: 10px;
+                              border-bottom: 1px solid #ededed;
+                              color: #455056;
+                            "
+                          >
+                          [First Name]
+                          </td>
+                        </tr>
+
                         </tbody>
                       </table>
                     </td>
                   </tr>
+
+                  <tr>
+                  <td
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #ededed;
+                      border-right: 1px solid #ededed;
+                      width: 35%;
+                      font-weight: 500;
+                      color: rgba(0, 0, 0, 0.64);
+                    "
+                  >
+                    Date of Birth:
+                  </td>
+                  <td
+                    style="
+                      padding: 10px;
+                      border-bottom: 1px solid #ededed;
+                      color: #455056;
+                    "
+                  >
+                  [Date of Birth]
+                  </td>
+                </tr>
+
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+          <td
+            style="
+              padding: 10px;
+              border-bottom: 1px solid #ededed;
+              border-right: 1px solid #ededed;
+              width: 35%;
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.64);
+            "
+          >
+            Occupation:
+          </td>
+          <td
+            style="
+              padding: 10px;
+              border-bottom: 1px solid #ededed;
+              color: #455056;
+            "
+          >
+          [Occupation]
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+  <td
+    style="
+      padding: 10px;
+      border-bottom: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      width: 35%;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.64);
+    "
+  >
+    Residential Address:
+  </td>
+  <td
+    style="
+      padding: 10px;
+      border-bottom: 1px solid #ededed;
+      color: #455056;
+    "
+  >
+  [Residential Address]
+  </td>
+</tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Phone Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Phone Number]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Bank Verification Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Bank Verification Number]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Identification Type:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Identification Type]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+Identification Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Identification Number]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Upload Passport:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Upload Passport]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Surname:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_surname]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Middlename:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_mname]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  First Name:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_fname]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Date of Birth:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_dob]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Occupation:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_occupation]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Residential Address:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_address]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Phone Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_phone_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Bank Verification Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_bvn]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Identification Type:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_identification]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Identification Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_identification_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Relationship:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_relationship]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Signatory:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_signatory]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Upload Passport:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_passport]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Company Name:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[c_company_name]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  RC Number:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[j_rc_no]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Date of Registration:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[c_dor]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Email:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[Email]
+</td>
+</tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+
                   <tr>
                     <td style="height: 40px">&nbsp;</td>
                   </tr>
