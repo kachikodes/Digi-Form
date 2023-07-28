@@ -66,8 +66,8 @@ export class AflTwoComponent implements OnInit {
 <html lang="en-US">
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Appointment Reminder Email Template</title>
-    <meta name="description" content="Appointment Reminder Email Template" />
+    <title>Investment Form</title>
+    <meta name="description" content="Investment Form" />
   </head>
   <style>
     a:hover {
@@ -939,7 +939,7 @@ Identification Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Altron Investment:
+Type of Investment:
 </td>
 <td
   style="
@@ -963,7 +963,7 @@ Altron Investment:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-  60 days:
+  Tenure:
 </td>
 <td
   style="
@@ -1131,7 +1131,7 @@ Account Number:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Pick from our office:
+Means of collecting certificate:
 </td>
 <td
   style="
@@ -1141,6 +1141,19 @@ Pick from our office:
   "
 >
 [means]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Beneficiary
 </td>
 </tr>
 
@@ -1236,7 +1249,7 @@ Percentage:
     color: #455056;
   " 
 >
-[Percentage (%)]
+[b_percentage]
 </td>
 </tr>
 
@@ -1313,7 +1326,7 @@ Authorized Signature & Date:
                     margin: 0 0 0;
                   "
                 >
-                  &copy; <strong>www.rakeshmandal.com</strong>
+                  &copy; <strong>www.addosserfinance.com</strong>
                 </p>
               </td>
             </tr>

@@ -1,9 +1,9 @@
 .navbar {
-    width:845px;
+    width:745px;
     height:177px;
     box-shadow: 0px 12px 22px 0px #0000000A;
     border-radius: 2px 2px 20px 20px;
-    left:380px;
+    left:270px;
     position: relative;
     margin-bottom: 30px;
 }
@@ -13,26 +13,26 @@
     color:#0800A5;
     font-weight: 700;
     font-size: 24px;
-    margin-left:360px;
+    margin-left:240px;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Inter', sans-serif;
 
 }
 
 .pxt {
-    display:block;   
+    display:flex;
+    flex-direction: row;   
 }
 
 .imgone {    
 }
 
 .secondimg {
-    margin-left: 150px;
+    margin-left: 60px;
 }
 
 .imgthree {
-    float:right;
-    margin-top:-18px;
+    margin-top:-25px;
 }
 
 .mobview {
@@ -40,7 +40,7 @@
 }
 
 .contained {
-    padding-left:220px;   
+    padding-left:200px;   
 }
 
 .grid-containerx {
@@ -102,9 +102,14 @@ div.container h4 {
 
 .backg {
     background: #F9FAFB;
-    padding: 10px 18px;
-    height:60px;
-    width:1200px;
+    padding: 10px 10px;
+    
+    
+    
+    
+    
+    
+    
 }
 
 .prev {
@@ -130,6 +135,7 @@ div.container h4 {
   font-size: 18px;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
+  left:120px;
 }
 
 .prev:hover {
