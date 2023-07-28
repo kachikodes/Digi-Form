@@ -156,19 +156,36 @@
         </div>
 
         <div class="container mb-3">
-          <h4>beneficiaries 1 (next of kin)</h4>
+          <h4>beneficiary (next of kin)</h4>
         </div>
 
         <div class="row mb-3">
           <div class="col-sm-5 col-12">
+            <label>Title<span class="aster"> *</span></label>
+            <input type="text" id="name" name="title" placeholder="Mr/Miss/Mrs/Dr..." class="form-control" formControlName="b_title" />
+          </div>
+
+          <div class="col-sm-5 col-12">
             <label>Name<span class="aster"> *</span></label>
             <input type="text" id="name" class="form-control" formControlName="b_name" />
           </div>
-          <div class="col-sm-5 col-12">
-            <label>Phone Number<span class="aster"> *</span></label>
-            <input type="tel" id="phone-no" class="form-control" formControlName="b_phone_no" />
-          </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-sm-5 col-12">
+          <label>Phone Number<span class="aster"> *</span></label>
+          <input type="tel" id="phone-no" class="form-control" formControlName="b_phone_no" />
         </div>
+        <div class="col-sm-5 col-12">
+          <label>Percentage (%)<span class="aster"> *</span></label>
+          <input
+            type="percentage"
+            id="percentage"
+            class="form-control"
+            formControlName="b_percentage"
+          />
+        </div>
+      </div>
 
         <div class="row mb-4">
           <div class="col-sm-10 col-12">
@@ -177,17 +194,7 @@
           </div>
         </div>
 
-        <div class="row mb-5">
-          <div class="col-sm-5 col-12">
-            <label>Percentage (%)<span class="aster"> *</span></label>
-            <input
-              type="percentage"
-              id="percentage"
-              class="form-control"
-              formControlName="b_percentage"
-            />
-          </div>
-        </div>
+      
 
 
         <div class="row mb-5">

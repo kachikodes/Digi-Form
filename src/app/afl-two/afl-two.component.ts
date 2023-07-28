@@ -477,6 +477,19 @@ Identification Number:
   style="
     padding: 10px;
     border-bottom: 1px solid #ededed;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Joint Investment/Trust Details
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
     border-right: 1px solid #ededed;
     width: 35%;
     font-weight: 500;
@@ -813,6 +826,19 @@ Identification Number:
   style="
     padding: 10px;
     border-bottom: 1px solid #ededed;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
+  Company Details
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
     border-right: 1px solid #ededed;
     width: 35%;
     font-weight: 500;
@@ -1059,6 +1085,30 @@ Payment Frequency:
     color: rgba(0, 0, 0, 0.64);
   "
 >
+Payment Option:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[option]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
 Account Name:
 </td>
 <td
@@ -1168,6 +1218,30 @@ Means of collecting certificate:
     color: rgba(0, 0, 0, 0.64);
   "
 >
+  Title:
+</td>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    color: #455056;
+  "
+>
+[b_title]
+</td>
+</tr>
+
+<tr>
+<td
+  style="
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    width: 35%;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.64);
+  "
+>
   Name:
 </td>
 <td
@@ -1216,16 +1290,16 @@ Means of collecting certificate:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Residential Address:
+Percentage:
 </td>
 <td
   style="
     padding: 10px;
     border-bottom: 1px solid #ededed;
     color: #455056;
-  "
+  " 
 >
-[b_address]
+[b_percentage]
 </td>
 </tr>
 
@@ -1240,16 +1314,16 @@ Residential Address:
     color: rgba(0, 0, 0, 0.64);
   "
 >
-Percentage:
+Residential Address:
 </td>
 <td
   style="
     padding: 10px;
     border-bottom: 1px solid #ededed;
     color: #455056;
-  " 
+  "
 >
-[b_percentage]
+[b_address]
 </td>
 </tr>
 
@@ -1381,10 +1455,11 @@ Authorized Signature & Date:
       .replace('[acc_name]', this.formData[1].acc_name)
       .replace('[acc_no]', this.formData[1].acc_no)
       .replace('[means]', this.formData[1].means)
+      .replace('[b_title]', this.formData[1].b_title)
       .replace('[b_name]', this.formData[1].b_name)
       .replace('[b_phone_no]', this.formData[1].b_phone_no)
-      .replace('[b_address]', this.formData[1].b_address)
       .replace('[b_percentage]', this.formData[1].b_percentage)
+      .replace('[b_address]', this.formData[1].b_address)
       .replace('[c_sign]', this.formData[1].c_sign)
       .replace('[a_sign]', this.formData[1].a_sign);
   }
@@ -1416,7 +1491,7 @@ Authorized Signature & Date:
         },
       ],
       message_body: this.getData(),
-      sender_name: 'Atlas Sender',
+      sender_name: 'Addosser Finance Investment Form',
       sender_mail: 'digiteam@addosser.com',
     };
      console.log(realPayload)
