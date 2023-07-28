@@ -61,41 +61,6 @@ export class AflTwoComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    let payload = [];
-    payload.push(this.formData);
-    payload.push(this.feedbackForm.value);
-    console.log(payload);
-    this._form.loginSubject.next(payload);
-    // this._router.navigate(['afl-two']);
-
-    let realPayload = {
-      subject: 'Appointment',
-      email_add: [
-        // {
-        //   email_address: 'peterayebhere@gmail.com',
-        //   full_name: 'Peter Eikore',
-        // },
-        {
-          email_address: 'ekundayoolumide1@gmail.com',
-          full_name: 'Ekundayo Olumide',
-        },
-        {
-          email_address: 'kachiagu99@gmail.com',
-          full_name: 'Kachi Olumide',
-        },
-      ],
-      message_body: this.getData,
-      sender_name: 'Atlas Sender',
-      sender_mail: 'digiteam@addosser.com',
-    };
-     console.log(realPayload)
-    this._form.onSendMultipleMail(realPayload)
-      .subscribe((res) => {
-      console.log(res)
-    })
-  }
-
   email = `
   <!DOCTYPE html>
 <html lang="en-US">
@@ -1363,51 +1328,88 @@ Authorized Signature & Date:
 
   getData() {
     return this.email
-      .replace('[surname]', 'Sivuyile Magutywa')
-      .replace('[fname]', 'Paul Dean')
-      .replace('[dob]', 'Paul Dean')
-      .replace('[raddress]', 'Paul Dean')
-      .replace('[occupation]', 'Paul Dean')
-      .replace('[phone_no]', 'Paul Dean')
-      .replace('[email]', 'Paul Dean')
-      .replace('[bvn]', 'Paul Dean')
-      .replace('[identification]', 'Paul Dean')
-      .replace('[identification_no]', 'Paul Dean')
-      .replace('[passport]', 'Paul Dean')
-      .replace('[j_surname]', 'Paul Dean')
-      .replace('[j_mname]', 'Paul Dean')
-      .replace('[j_fname]', 'Paul Dean')
-      .replace('[j_dob]', 'Paul Dean')
-      .replace('[j_address]', 'Paul Dean')
-      .replace('[j_occupation]', 'Paul Dean')
-      .replace('[j_phone_no]', 'Paul Dean')
-      .replace('[j_email]', 'Paul Dean')
-      .replace('[j_bvn]', 'Paul Dean')
-      .replace('[j_identification]', 'Paul Dean')
-      .replace('[j_identification_no]', 'Paul Dean')
-      .replace('[j_relationship]', 'Paul Dean')
-      .replace('[j_signatory]', 'Paul Dean')
-      .replace('[j_passport]', 'Paul Dean')
-      .replace('[c_company_name]', 'Paul Dean')
-      .replace('[j_rc_no]', 'Paul Dean')
-      .replace('[c_dor]', 'Paul Dean')
-      .replace('[c_bvn]', 'Paul Dean')
-      .replace('[c_residential]', 'Paul Dean')
-      .replace('[investment]', 'Paul Dean')
-      .replace('[tenure]', 'Paul Dean')
-      .replace('[i_amount]', 'Paul Dean')
-      .replace('[p_amount]', 'Paul Dean')
-      .replace('[p_frequency]', 'Paul Dean')
-      .replace('[option]', 'Paul Dean')
-      .replace('[acc]', 'Paul Dean')
-      .replace('[acc_name]', 'Paul Dean')
-      .replace('[acc_no]', 'Paul Dean')
-      .replace('[means]', 'Paul Dean')
-      .replace('[b_name]', 'Paul Dean')
-      .replace('[b_phone_no]', 'Paul Dean')
-      .replace('[b_address]', 'Paul Dean')
-      .replace('[b_percentage]', 'Paul Dean')
-      .replace('[c_sign]', 'Paul Dean')
-      .replace('[a_sign]', 'Paul Dean');
+      .replace('[surname]', this.formData[0].surname)
+      .replace('[fname]', this.formData[0].fname)
+      .replace('[dob]', this.formData[0].dob)
+      .replace('[raddress]', this.formData[0].raddress)
+      .replace('[occupation]', this.formData[0].occupation)
+      .replace('[phone_no]', this.formData[0].phone_no)
+      .replace('[email]', this.formData[0].email)
+      .replace('[bvn]', this.formData[0].bvn)
+      .replace('[identification]', this.formData[0].identification)
+      .replace('[identification_no]', this.formData[0].identification_no)
+      .replace('[passport]', this.formData[0].passport)
+      .replace('[j_surname]', this.formData[0].j_surname)
+      .replace('[j_mname]', this.formData[0].j_mname)
+      .replace('[j_fname]', this.formData[0].j_fname)
+      .replace('[j_dob]', this.formData[0].j_dob)
+      .replace('[j_address]', this.formData[0].j_address)
+      .replace('[j_occupation]', this.formData[0].j_occupation)
+      .replace('[j_phone_no]', this.formData[0].j_phone_no)
+      .replace('[j_email]', this.formData[0].j_email)
+      .replace('[j_bvn]', this.formData[0].j_bvn)
+      .replace('[j_identification]', this.formData[0].j_identification)
+      .replace('[j_identification_no]', this.formData[0].j_identification_no)
+      .replace('[j_relationship]', this.formData[0].j_relationship)
+      .replace('[j_signatory]', this.formData[0].j_signatory)
+      .replace('[j_passport]', this.formData[0].j_passport)
+      .replace('[c_company_name]', this.formData[0].c_company_name)
+      .replace('[j_rc_no]', this.formData[0].j_rc_no)
+      .replace('[c_dor]', this.formData[0].c_dor)
+      .replace('[c_bvn]', this.formData[0].c_bvn)
+      .replace('[c_residential]', this.formData[0].c_residential)
+      .replace('[investment]', this.formData[0].investment)
+      .replace('[tenure]', this.formData[0].tenure)
+      .replace('[i_amount]', this.formData[1].i_amount)
+      .replace('[p_amount]', this.formData[1].p_amount)
+      .replace('[p_frequency]', this.formData[1].p_frequency)
+      .replace('[option]', this.formData[1].option)
+      .replace('[acc]', this.formData[1].acc)
+      .replace('[acc_name]', this.formData[1].acc_name)
+      .replace('[acc_no]', this.formData[1].acc_no)
+      .replace('[means]', this.formData[1].means)
+      .replace('[b_name]', this.formData[1].b_name)
+      .replace('[b_phone_no]', this.formData[1].b_phone_no)
+      .replace('[b_address]', this.formData[1].b_address)
+      .replace('[b_percentage]', this.formData[1].b_percentage)
+      .replace('[c_sign]', this.formData[1].c_sign)
+      .replace('[a_sign]', this.formData[1].a_sign);
+  }
+
+  
+
+  onSubmit() {
+    let payload = [];
+    payload.push(this.formData);
+    payload.push(this.feedbackForm.value);
+    console.log(payload);
+    this._form.loginSubject.next(payload);
+    // this._router.navigate(['afl-two']);
+
+    let realPayload = {
+      subject: 'Appointment',
+      email_add: [
+        // {
+        //   email_address: 'peterayebhere@gmail.com',
+        //   full_name: 'Peter Eikore',
+        // },
+        {
+          email_address: 'ekundayoolumide1@gmail.com',
+          full_name: 'Ekundayo Olumide',
+        },
+        {
+          email_address: 'kachiagu99@gmail.com',
+          full_name: 'Kachi Olumide',
+        },
+      ],
+      message_body: this.getData(),
+      sender_name: 'Atlas Sender',
+      sender_mail: 'digiteam@addosser.com',
+    };
+     console.log(realPayload)
+    this._form.onSendMultipleMail(realPayload)
+      .subscribe((res) => {
+      console.log(res)
+    })
   }
 }
