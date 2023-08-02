@@ -22,7 +22,7 @@ export class FormService {
   onSendMultipleMail(payload: any) {
     return this._http
       .post<any>(
-        `https://intranetapi.addosser.com/api/mail/send-multiple`,
+        `http://intranet.atlas.ng/api/mail/send-multiple`,
         payload
       )
       .pipe();
