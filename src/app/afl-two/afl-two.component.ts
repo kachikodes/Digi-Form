@@ -47,6 +47,7 @@ export class AflTwoComponent implements OnInit {
       b_phone_no: [this.formData?.b_phone_no, Validators.required],
       b_address: [this.formData?.b_address, Validators.required],
       b_percentage: [this.formData?.b_percentage, Validators.required],
+      b_title: [this.formData?.b_title, Validators.required],
       b2_name: [this.formData?.b2_name, Validators.required],
       b2_phone_no: [this.formData?.b2_phone_no, Validators.required],
       b2_address: [this.formData?.b2_address, Validators.required],
@@ -156,7 +157,7 @@ export class AflTwoComponent implements OnInit {
                           font-family: 'Rubik', sans-serif;
                         "
                       >
-                        Appointment Reminder
+                        Customer's Details
                       </h1>
                       <span
                         style="
@@ -198,7 +199,7 @@ export class AflTwoComponent implements OnInit {
                                 color: #455056;
                               "
                             >
-                            [Surname]
+                            [surname]
                             </td>
                           </tr>
 
@@ -208,7 +209,7 @@ export class AflTwoComponent implements OnInit {
                                 padding: 10px;
                                 border-bottom: 1px solid #ededed;
                                 border-right: 1px solid #ededed;
-                                width: 35%;
+                                width: 50%;
                                 font-weight: 500;
                                 color: rgba(0, 0, 0, 0.64);
                               "
@@ -222,7 +223,7 @@ export class AflTwoComponent implements OnInit {
                                 color: #455056;
                               "
                             >
-                            [Middlename]
+                            [mname]
                             </td>
                           </tr>
                           
@@ -232,7 +233,7 @@ export class AflTwoComponent implements OnInit {
                               padding: 10px;
                               border-bottom: 1px solid #ededed;
                               border-right: 1px solid #ededed;
-                              width: 35%;
+                              width: 50%;
                               font-weight: 500;
                               color: rgba(0, 0, 0, 0.64);
                             "
@@ -246,7 +247,7 @@ export class AflTwoComponent implements OnInit {
                               color: #455056;
                             "
                           >
-                          [First Name]
+                          [fname]
                           </td>
                         </tr>
 
@@ -256,7 +257,7 @@ export class AflTwoComponent implements OnInit {
                       padding: 10px;
                       border-bottom: 1px solid #ededed;
                       border-right: 1px solid #ededed;
-                      width: 35%;
+                      width: 50%;
                       font-weight: 500;
                       color: rgba(0, 0, 0, 0.64);
                     "
@@ -268,9 +269,10 @@ export class AflTwoComponent implements OnInit {
                       padding: 10px;
                       border-bottom: 1px solid #ededed;
                       color: #455056;
+
                     "
                   >
-                  [Date of Birth]
+                  [dob]
                   </td>
                 </tr>
 
@@ -299,7 +301,7 @@ export class AflTwoComponent implements OnInit {
       color: #455056;
     "
   >
-  [Residential Address]
+  [raddress]
   </td>
 </tr>
 
@@ -323,7 +325,7 @@ export class AflTwoComponent implements OnInit {
               color: #455056;
             "
           >
-          [Occupation]
+          [occupation]
           </td>
         </tr>
 
@@ -347,7 +349,7 @@ export class AflTwoComponent implements OnInit {
             color: #455056;
           "
         >
-        [Phone Number]
+        [phone_no]
         </td>
         </tr>
 
@@ -372,7 +374,7 @@ export class AflTwoComponent implements OnInit {
     color: #455056;
   "
 >
-[Email]
+[email]
 </td>
 </tr>
 
@@ -396,7 +398,7 @@ Bank Verification Number:
     color: #455056;
   "
 >
-[Bank Verification Number]
+[bvn]
 </td>
 </tr>
 
@@ -420,7 +422,7 @@ Identification Type:
     color: #455056;
   "
 >
-[Identification Type]
+[identification]
 </td>
 </tr>
 
@@ -444,7 +446,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Identification Number]
+[identification_no]
 </td>
 </tr>
 
@@ -468,7 +470,7 @@ Identification Number:
     color: #455056;
   "
 >
-[Upload Passport]
+[passport]
 </td>
 </tr>
 
@@ -1414,8 +1416,10 @@ Authorized Signature & Date:
   `;
 
   getData() {
+    console.log(this.formData[0], this.formData[0].surname)
     return this.email
       .replace('[surname]', this.formData[0].surname)
+      .replace('[mname]', this.formData[0].mname)
       .replace('[fname]', this.formData[0].fname)
       .replace('[dob]', this.formData[0].dob)
       .replace('[raddress]', this.formData[0].raddress)
@@ -1475,7 +1479,7 @@ Authorized Signature & Date:
     // this._router.navigate(['afl-two']);
 
     let realPayload = {
-      subject: 'Appointment',
+      subject: 'Addosser Finance Investment Form',
       email_add: [
         // {
         //   email_address: 'peterayebhere@gmail.com',
@@ -1491,7 +1495,7 @@ Authorized Signature & Date:
         },
       ],
       message_body: this.getData(),
-      sender_name: 'Addosser Finance Investment Form',
+      sender_name: 'AFL',
       sender_mail: 'digiteam@addosser.com',
     };
      console.log(realPayload)
