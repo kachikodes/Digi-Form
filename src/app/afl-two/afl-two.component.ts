@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormService } from '../services/form.service';
+import { Ng2ImgMaxService } from 'ng2-img-max';
 
 @Component({
   selector: 'app-afl-two',
@@ -11,10 +12,13 @@ import { FormService } from '../services/form.service';
 export class AflTwoComponent implements OnInit {
   feedbackForm!: FormGroup;
   formData: any;
+  image4: any;
+  image5: any;
   constructor(
     private _form: FormService,
     private _fb: FormBuilder,
-    private _router: Router
+    private _router: Router,
+    private ng2ImgMax: Ng2ImgMaxService
   ) {
     this._form.loginSubject.asObservable().subscribe({
       next: (res: any) => {
@@ -1470,6 +1474,66 @@ Authorized Signature & Date:
 
   
 
+  onFileSelected(event: any, type: any) {
+    const file: File = event.target.files[0];
+    if ((this._form.getFileSizeUnit(file.size) === 'MB') && (this._form.getFileSize(file.size) >= 7.00)) {
+      // console.log(this._form.getFileSizeUnit(file.size))
+      if (file) {
+        const percentageReduction = 0.95;
+        const targetFileSize = file.size * (1 - percentageReduction);
+        console.log(targetFileSize)
+        const maxSizeInMB = targetFileSize * 0.000001;
+        console.log(maxSizeInMB)
+        this.compressImage(file, maxSizeInMB, type);
+      }
+    } else {
+      // console.log(this._form.getFileSizeUnit(file.size))
+      this.handleUpload(event, type)
+    }
+  }
+
+  handleUpload(event: any, type: any) {
+    const file = event.target.files[0];
+    const name = event.target.files[0].name;
+    const fileType = event.target.files[0].type;
+    // console.log(file)
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      console.log(name, fileType);
+      if (type === 'c_sign') {
+        this.image4 = {
+          "file_type": fileType,
+          "file_base64": reader.result,
+          "file_name": name
+        }
+        return;
+      }
+      if (type === 'a_sign') {
+        this.image5 = {
+          "file_type": fileType,
+          "file_base64": reader.result,
+          "file_name": name
+        }
+        return;
+      }
+    };
+  }
+
+  compressImage(file: File, maxSizeInMB: number, type: any) {
+    // console.log('Compressed')
+    this.ng2ImgMax.compressImage(file, maxSizeInMB)
+      .subscribe(compressedImage => {
+        console.log(compressedImage)
+        this.handleUpload(compressedImage, type)
+        // Do whatever you want to do with the compressed file, like send to server.
+      }, error => {
+        console.log(error.reason);
+      });
+  }
+
+  
+
   onSubmit() {
     let payload = [];
     payload.push(this.formData);
@@ -1478,30 +1542,30 @@ Authorized Signature & Date:
     this._form.loginSubject.next(payload);
     // this._router.navigate(['afl-two']);
 
-    let realPayload = {
-      subject: 'Addosser Finance Investment Form',
-      email_add: [
-        // {
-        //   email_address: 'peterayebhere@gmail.com',
-        //   full_name: 'Peter Eikore',
-        // },
-        {
-          email_address: 'ekundayoolumide1@gmail.com',
-          full_name: 'Ekundayo Olumide',
-        },
-        {
-          email_address: 'kachiagu99@gmail.com',
-          full_name: 'Kachi Olumide',
-        },
-      ],
-      message_body: this.getData(),
-      sender_name: 'AFL',
-      sender_mail: 'digiteam@addosser.com',
-    };
-     console.log(realPayload)
-    this._form.onSendMultipleMail(realPayload)
-      .subscribe((res) => {
-      console.log(res)
-    })
+    // let realPayload = {
+    //   subject: 'Addosser Finance Investment Form',
+    //   email_add: [
+    //     // {
+    //     //   email_address: 'peterayebhere@gmail.com',
+    //     //   full_name: 'Peter Eikore',
+    //     // },
+    //     {
+    //       email_address: 'ekundayoolumide1@gmail.com',
+    //       full_name: 'Ekundayo Olumide',
+    //     },
+    //     {
+    //       email_address: 'kachiagu99@gmail.com',
+    //       full_name: 'Kachi Olumide',
+    //     },
+    //   ],
+    //   message_body: this.getData(),
+    //   sender_name: 'AFL',
+    //   sender_mail: 'digiteam@addosser.com',
+    // };
+    //  console.log(realPayload)
+    // this._form.onSendMultipleMail(realPayload)
+    //   .subscribe((res) => {
+    //   console.log(res)
+    // })
   }
 }

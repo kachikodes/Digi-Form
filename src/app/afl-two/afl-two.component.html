@@ -44,7 +44,7 @@
             <label>Investment Amount<span class="aster">*</span></label>
             <input
               type="tel"
-              id="Surname"
+              id="no"
               class="form-control"
               formControlName="i_amount"
             />
@@ -53,7 +53,7 @@
             <label>Payment Amount <span class="aster">*</span></label>
             <input
               type="tel"
-              id="Surname"
+              id="no"
               class="form-control"
               formControlName="p_amount"
             />
@@ -99,7 +99,6 @@
               id="name"
               class="form-control"
               formControlName="acc_name"
-              
             />
           </div>
         </div>
@@ -108,7 +107,7 @@
           <div class="col-sm-5 col-12">
             <label>Account Number <span class="aster">*</span></label>
             <input
-              type="num"
+              type="tel"
               id="phone-no"
               class="form-control"
               formControlName="acc_no"
@@ -117,9 +116,7 @@
         </div>
 
         <div class="contain">
-          <h5
-          >Kindly indicate your preferred means of certificate</h5>
-           
+          <h5>Kindly indicate your preferred means of certificate</h5>
         </div>
 
         <div class="row mt-2 mb-3">
@@ -161,53 +158,84 @@
         <div class="row mb-3">
           <div class="col-sm-5 col-12">
             <label>Title<span class="aster"> *</span></label>
-            <input type="text" id="name" name="title" placeholder="Mr/Miss/Mrs/Dr..." class="form-control" formControlName="b_title" />
+            <input
+              type="text"
+              id="name"
+              name="title"
+              placeholder="Mr/Miss/Mrs/Dr..."
+              class="form-control"
+              formControlName="b_title"
+            />
           </div>
 
           <div class="col-sm-5 col-12">
             <label>Name<span class="aster"> *</span></label>
-            <input type="text" id="name" class="form-control" formControlName="b_name" />
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="b_name"
+            />
           </div>
-      </div>
+        </div>
 
-      <div class="row mb-5">
-        <div class="col-sm-5 col-12">
-          <label>Phone Number<span class="aster"> *</span></label>
-          <input type="tel" id="phone-no" class="form-control" formControlName="b_phone_no" />
+        <div class="row mb-5">
+          <div class="col-sm-5 col-12">
+            <label>Phone Number<span class="aster"> *</span></label>
+            <input
+              type="tel"
+              id="phone-no"
+              class="form-control"
+              formControlName="b_phone_no"
+            />
+          </div>
+          <div class="col-sm-5 col-12">
+            <label>Percentage (%)<span class="aster"> *</span></label>
+            <input
+              type="tel"
+              id="percentage"
+              class="form-control"
+              formControlName="b_percentage"
+            />
+          </div>
         </div>
-        <div class="col-sm-5 col-12">
-          <label>Percentage (%)<span class="aster"> *</span></label>
-          <input
-            type="percentage"
-            id="percentage"
-            class="form-control"
-            formControlName="b_percentage"
-          />
-        </div>
-      </div>
 
         <div class="row mb-4">
           <div class="col-sm-10 col-12">
             <label>Residential Address<span class="aster">*</span></label>
-            <input type="text" id="address" class="form-control" formControlName="b_address" />
+            <input
+              type="text"
+              id="address"
+              class="form-control"
+              formControlName="b_address"
+            />
           </div>
         </div>
-
-      
-
 
         <div class="row mb-5">
           <div class="col-sm-5 col-12 mb-3">
             <label
               >Customer Signature & Date <span class="aster">*</span></label
             >
-            <input type="file" class="form-control" id="inputGroupFile02" formControlName="c_sign" />
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupFile02"
+              formControlName="c_sign"
+              (change)="onFileSelected($event, 'c_sign')"
+            />
           </div>
           <div class="col-sm-5 col-12">
             <label
               >Authorized Signature & Date<span class="aster">*</span></label
             >
-            <input type="file" class="form-control" id="inputGroupFile02" formControlName="a_sign" />
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupFile02"
+              formControlName="a_sign"
+              (change)="onFileSelected($event, 'a_sign')"
+            />
           </div>
         </div>
 
@@ -263,13 +291,9 @@
               />
             </div>
             <div class="col-6">
-                <button
-                  (click)="onSubmit()"
-                    type="button"
-                    class="nxt btn btn-lg"
-                  >
-                    Next
-                  </button>
+              <button (click)="onSubmit()" type="button" class="nxt btn btn-lg">
+                Next
+              </button>
             </div>
           </div>
         </div>
@@ -277,6 +301,5 @@
     </form>
   </div>
 </section>
-
 
 <!-- <div class="" [innerHTML]="getData()"></div> -->

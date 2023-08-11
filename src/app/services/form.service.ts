@@ -37,10 +37,13 @@ export class FormService {
     this.ng2ImgMax.compressImage(file, maxSizeInMB)
       .subscribe(compressedImage => {
         console.log(compressedImage)
+        file = compressedImage;
         // Do whatever you want to do with the compressed file, like send to server.
       }, error => {
         console.log(error.reason);
      });
+
+     return file;
   }
 
   getFileSize(fileSize: number): number {

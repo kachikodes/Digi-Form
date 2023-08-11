@@ -157,7 +157,7 @@
             <label>Identification Number <span class="aster">*</span></label>
             <input
               type="tel"
-              id="email"
+              id="no"
               class="form-control"
               formControlName="identification_no"
             />
@@ -275,7 +275,7 @@
               >
               <input
                 type="tel"
-                id="email"
+                id="no"
                 class="form-control"
                 formControlName="j_bvn"
               />
@@ -298,7 +298,7 @@
               <label>Identification Number <span class="aster">*</span></label>
               <input
                 type="tel"
-                id="email"
+                id="no"
                 class="form-control"
                 formControlName="j_identification_no"
               />
@@ -325,6 +325,7 @@
                 id="email"
                 class="form-control"
                 formControlName="j_signatory"
+                (change)="onFileSelected($event, 'j_signatory')"
               />
             </div>
             <div class="col-md-5 col-12">
@@ -334,6 +335,7 @@
                 class="form-control"
                 id="inputGroupFile02"
                 formControlName="j_passport"
+                (change)="onFileSelected($event, 'j_passport')"
               />
             </div>
           </div>
@@ -356,7 +358,7 @@
               <label>RC Number<span class="aster">*</span></label>
               <input
                 type="tel"
-                id="phonE_no"
+                id="no"
                 class="form-control"
                 formControlName="j_rc_no"
               />

@@ -79,15 +79,53 @@ export class AflFormComponent implements OnInit {
 
   onNext() {
     // console.log(this.feedbackForm.value);
-    this._form.loginSubject.next(this.feedbackForm.value)
+    let payload = {
+      email: this.feedbackForm.value.email,
+      surname: this.feedbackForm.value.surname,
+      mname: this.feedbackForm.value.mname,
+      fname: this.feedbackForm.value.fname,
+      dob: this.feedbackForm.value.dob,
+      occupation: this.feedbackForm.value.occupation,
+      raddress: this.feedbackForm.value.raddress,
+      phone_no: this.feedbackForm.value.phone_no,
+      bvn: this.feedbackForm.value.bvn,
+      identification: this.feedbackForm.value.identification,
+      identification_no: this.feedbackForm.value.identification_no,
+      passport: this.image1,
+      j_surname: this.feedbackForm.value.j_surname,
+      j_mname: this.feedbackForm.value.j_mname,
+      j_fname: this.feedbackForm.value.j_fname,
+      j_dob: this.feedbackForm.value.j_dob,
+      j_occupation: this.feedbackForm.value.j_occupation,
+      j_address: this.feedbackForm.value.j_address,
+      j_email: this.feedbackForm.value.j_email,
+      j_phone_no: this.feedbackForm.value.j_phone_no,
+      j_bvn: this.feedbackForm.value.j_bvn,
+      j_identification: this.feedbackForm.value.j_identification,
+      j_identification_no: this.feedbackForm.value.j_identification_no,
+      j_relationship: this.feedbackForm.value.j_relationship,
+      j_signatory: this.image2,
+      j_passport: this.image3,
+      c_company_name: this.feedbackForm.value.c_company_name,
+      j_rc_no: this.feedbackForm.value.j_rc_no,
+      c_dor: this.feedbackForm.value.c_dor,
+      c_residential: this.feedbackForm.value.c_residential,
+      c_bvn: this.feedbackForm.value.c_bvn,
+      investment: this.feedbackForm.value.investment,
+      tenure: this.feedbackForm.value.tenure,
+    }
+    this._form.loginSubject.next(payload)
     this._router.navigate(['afl-two']);
   }
 
   onFileSelected(event: any, type: any) {
     const file: File = event.target.files[0];
-    console.log()
+    // console.log()
     // let currentSize = `${this._form.getFileSize(file.size)} ${this._form.getFileSizeUnit(file.size)}`
-    if (this._form.getFileSize(file.size) >= 7.00) {
+    // console.log(this._form.getFileSize(file.size))
+    // console.log(typeof this._form.getFileSize(file.size))
+    if ((this._form.getFileSizeUnit(file.size) === 'MB') && (this._form.getFileSize(file.size) >= 7.00)) {
+      // console.log(this._form.getFileSizeUnit(file.size))
       if (file) {
         const percentageReduction = 0.95;
         const targetFileSize = file.size * (1 - percentageReduction);
@@ -97,6 +135,7 @@ export class AflFormComponent implements OnInit {
         this.compressImage(file, maxSizeInMB, type);
       }
     } else {
+      // console.log(this._form.getFileSizeUnit(file.size))
       this.handleUpload(event, type)
     }
   }
@@ -136,7 +175,7 @@ export class AflFormComponent implements OnInit {
         return;
       }
       if (type === 'c_sign') {
-        this.image1 = {
+        this.image4 = {
           "file_type": fileType,
           "file_base64": reader.result,
           "file_name": name
@@ -144,7 +183,7 @@ export class AflFormComponent implements OnInit {
         return;
       }
       if (type === 'a_sign') {
-        this.image1 = {
+        this.image5 = {
           "file_type": fileType,
           "file_base64": reader.result,
           "file_name": name
@@ -155,6 +194,7 @@ export class AflFormComponent implements OnInit {
   }
 
   compressImage(file: File, maxSizeInMB: number, type: any) {
+    // console.log('Compressed')
     this.ng2ImgMax.compressImage(file, maxSizeInMB)
       .subscribe(compressedImage => {
         console.log(compressedImage)
