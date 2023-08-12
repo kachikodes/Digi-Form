@@ -64,17 +64,17 @@
           <div class="col-sm-5 col-12">
             <label>Payment Frequency<span class="aster"> *</span></label>
             <select class="form-select" formControlName="p_frequency">
-              <option value="">Select</option>
-              <option value="">Monthly</option>
-              <option value="">BiMonthly</option>
-            
+              <option selected>Select</option>
+              <option value="Monthly">Monthly</option>
+              <option value="BiMonthly">BiMonthly</option>
             </select>
           </div>
           <div class="col-sm-5 col-12">
             <label>Payment Option<span class="aster">*</span></label>
             <select class="form-select" formControlName="option">
-              <option value="">Direct Debit</option>
-              <option value="">Self Payment</option>
+              <option selected>Select</option>
+              <option value="Direct Debit">Direct Debit</option>
+              <option value="Self Payment">Self Payment</option>
             </select>
           </div>
         </div>
@@ -292,7 +292,12 @@
               />
             </div>
             <div class="col-6">
-              <button (click)="onSubmit()" type="button" class="nxt btn btn-lg">
+              <button
+                (click)="onSubmit()"
+                type="button"
+                class="nxt btn btn-lg"
+                [disabled]="!feedbackForm.valid"
+              >
                 Next
               </button>
             </div>

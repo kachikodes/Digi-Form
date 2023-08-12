@@ -618,6 +618,7 @@
                   (click)="onNext()"
                     type="button"
                     class="nxt btn btn-lg"
+                    [disabled]="!feedbackForm.valid"
                   >
                     Next
                   </button>

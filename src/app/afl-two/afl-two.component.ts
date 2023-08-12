@@ -12,6 +12,9 @@ import { Ng2ImgMaxService } from 'ng2-img-max';
 export class AflTwoComponent implements OnInit {
   feedbackForm!: FormGroup;
   formData: any;
+  image1: any;
+  image2: any;
+  image3: any;
   image4: any;
   image5: any;
   constructor(
@@ -39,30 +42,30 @@ export class AflTwoComponent implements OnInit {
 
   initForm() {
     this.feedbackForm = this._fb.group({
-      i_amount: [this.formData?.i_amount, Validators.required],
-      p_amount: [this.formData?.p_amount, Validators.required],
-      p_frequency: [this.formData?.p_frequency, Validators.required],
-      option: [this.formData?.option, Validators.required],
-      acc: [this.formData?.acc, Validators.required],
-      acc_name: [this.formData?.acc_name, Validators.required],
-      acc_no: [this.formData?.acc_no, Validators.required],
-      means: [this.formData?.means, Validators.required],
-      b_name: [this.formData?.b_name, Validators.required],
-      b_phone_no: [this.formData?.b_phone_no, Validators.required],
-      b_address: [this.formData?.b_address, Validators.required],
-      b_percentage: [this.formData?.b_percentage, Validators.required],
-      b_title: [this.formData?.b_title, Validators.required],
-      b2_name: [this.formData?.b2_name, Validators.required],
-      b2_phone_no: [this.formData?.b2_phone_no, Validators.required],
-      b2_address: [this.formData?.b2_address, Validators.required],
-      b2_percentage: [this.formData?.b2_percentage, Validators.required],
-      b3_name: [this.formData?.b3_name, Validators.required],
-      b3_phone_no: [this.formData?.b3_phone_no, Validators.required],
-      b3_address: [this.formData?.b3_address, Validators.required],
-      b3_percentage: [this.formData?.b3_percentage, Validators.required],
+      i_amount: ['', Validators.required],
+      p_amount: ['', Validators.required],
+      p_frequency: ['', Validators.required],
+      option: ['', Validators.required],
+      acc: ['', Validators.required],
+      acc_name: ['', Validators.required],
+      acc_no: ['', Validators.required],
+      means: ['', Validators.required],
+      b_name: ['', Validators.required],
+      b_phone_no: ['', Validators.required],
+      b_address: ['', Validators.required],
+      b_percentage: ['', Validators.required],
+      b_title: ['', Validators.required],
+      b2_name: ['', Validators.required],
+      b2_phone_no: ['', Validators.required],
+      b2_address: ['', Validators.required],
+      b2_percentage: ['', Validators.required],
+      b3_name: ['', Validators.required],
+      b3_phone_no: ['', Validators.required],
+      b3_address: ['', Validators.required],
+      b3_percentage: ['', Validators.required],
       c_sign: ['', Validators.required],
       a_sign: ['', Validators.required],
-      terms: [this.formData?.terms, Validators.required],
+      terms: ['', Validators.required],
     });
   }
 
@@ -1420,75 +1423,76 @@ Authorized Signature & Date:
   `;
 
   getData() {
-    console.log(this.formData[0], this.formData[0].surname)
+    console.log(this.formData);
     return this.email
-      .replace('[surname]', this.formData[0].surname)
-      .replace('[mname]', this.formData[0].mname)
-      .replace('[fname]', this.formData[0].fname)
-      .replace('[dob]', this.formData[0].dob)
-      .replace('[raddress]', this.formData[0].raddress)
-      .replace('[occupation]', this.formData[0].occupation)
-      .replace('[phone_no]', this.formData[0].phone_no)
-      .replace('[email]', this.formData[0].email)
-      .replace('[bvn]', this.formData[0].bvn)
-      .replace('[identification]', this.formData[0].identification)
-      .replace('[identification_no]', this.formData[0].identification_no)
-      .replace('[passport]', this.formData[0].passport)
-      .replace('[j_surname]', this.formData[0].j_surname)
-      .replace('[j_mname]', this.formData[0].j_mname)
-      .replace('[j_fname]', this.formData[0].j_fname)
-      .replace('[j_dob]', this.formData[0].j_dob)
-      .replace('[j_address]', this.formData[0].j_address)
-      .replace('[j_occupation]', this.formData[0].j_occupation)
-      .replace('[j_phone_no]', this.formData[0].j_phone_no)
-      .replace('[j_email]', this.formData[0].j_email)
-      .replace('[j_bvn]', this.formData[0].j_bvn)
-      .replace('[j_identification]', this.formData[0].j_identification)
-      .replace('[j_identification_no]', this.formData[0].j_identification_no)
-      .replace('[j_relationship]', this.formData[0].j_relationship)
-      .replace('[j_signatory]', this.formData[0].j_signatory)
-      .replace('[j_passport]', this.formData[0].j_passport)
-      .replace('[c_company_name]', this.formData[0].c_company_name)
-      .replace('[j_rc_no]', this.formData[0].j_rc_no)
-      .replace('[c_dor]', this.formData[0].c_dor)
-      .replace('[c_bvn]', this.formData[0].c_bvn)
-      .replace('[c_residential]', this.formData[0].c_residential)
-      .replace('[investment]', this.formData[0].investment)
-      .replace('[tenure]', this.formData[0].tenure)
-      .replace('[i_amount]', this.formData[1].i_amount)
-      .replace('[p_amount]', this.formData[1].p_amount)
-      .replace('[p_frequency]', this.formData[1].p_frequency)
-      .replace('[option]', this.formData[1].option)
-      .replace('[acc]', this.formData[1].acc)
-      .replace('[acc_name]', this.formData[1].acc_name)
-      .replace('[acc_no]', this.formData[1].acc_no)
-      .replace('[means]', this.formData[1].means)
-      .replace('[b_title]', this.formData[1].b_title)
-      .replace('[b_name]', this.formData[1].b_name)
-      .replace('[b_phone_no]', this.formData[1].b_phone_no)
-      .replace('[b_percentage]', this.formData[1].b_percentage)
-      .replace('[b_address]', this.formData[1].b_address)
-      .replace('[c_sign]', this.formData[1].c_sign)
-      .replace('[a_sign]', this.formData[1].a_sign);
+      .replace('[surname]', this.formData.surname)
+      .replace('[mname]', this.formData.mname)
+      .replace('[fname]', this.formData.fname)
+      .replace('[dob]', this.formData.dob)
+      .replace('[raddress]', this.formData.raddress)
+      .replace('[occupation]', this.formData.occupation)
+      .replace('[phone_no]', this.formData.phone_no)
+      .replace('[email]', this.formData.email)
+      .replace('[bvn]', this.formData.bvn)
+      .replace('[identification]', this.formData.identification)
+      .replace('[identification_no]', this.formData.identification_no)
+      .replace('[passport]', this.formData.passport)
+      .replace('[j_surname]', this.formData.j_surname)
+      .replace('[j_mname]', this.formData.j_mname)
+      .replace('[j_fname]', this.formData.j_fname)
+      .replace('[j_dob]', this.formData.j_dob)
+      .replace('[j_address]', this.formData.j_address)
+      .replace('[j_occupation]', this.formData.j_occupation)
+      .replace('[j_phone_no]', this.formData.j_phone_no)
+      .replace('[j_email]', this.formData.j_email)
+      .replace('[j_bvn]', this.formData.j_bvn)
+      .replace('[j_identification]', this.formData.j_identification)
+      .replace('[j_identification_no]', this.formData.j_identification_no)
+      .replace('[j_relationship]', this.formData.j_relationship)
+      .replace('[j_signatory]', this.formData.j_signatory)
+      .replace('[j_passport]', this.formData.j_passport)
+      .replace('[c_company_name]', this.formData.c_company_name)
+      .replace('[j_rc_no]', this.formData.j_rc_no)
+      .replace('[c_dor]', this.formData.c_dor)
+      .replace('[c_bvn]', this.formData.c_bvn)
+      .replace('[c_residential]', this.formData.c_residential)
+      .replace('[investment]', this.formData.investment)
+      .replace('[tenure]', this.formData.tenure)
+      .replace('[i_amount]', this.formData.i_amount)
+      .replace('[p_amount]', this.formData.p_amount)
+      .replace('[p_frequency]', this.formData.p_frequency)
+      .replace('[option]', this.formData.option)
+      .replace('[acc]', this.formData.acc)
+      .replace('[acc_name]', this.formData.acc_name)
+      .replace('[acc_no]', this.formData.acc_no)
+      .replace('[means]', this.formData.means)
+      .replace('[b_title]', this.formData.b_title)
+      .replace('[b_name]', this.formData.b_name)
+      .replace('[b_phone_no]', this.formData.b_phone_no)
+      .replace('[b_percentage]', this.formData.b_percentage)
+      .replace('[b_address]', this.formData.b_address)
+      .replace('[c_sign]', this.formData.c_sign)
+      .replace('[a_sign]', this.formData.a_sign);
   }
-
-  
 
   onFileSelected(event: any, type: any) {
     const file: File = event.target.files[0];
-    if ((this._form.getFileSizeUnit(file.size) === 'MB') && (this._form.getFileSize(file.size) >= 7.00)) {
+    if (
+      this._form.getFileSizeUnit(file.size) === 'MB' &&
+      this._form.getFileSize(file.size) >= 7.0
+    ) {
       // console.log(this._form.getFileSizeUnit(file.size))
       if (file) {
         const percentageReduction = 0.95;
         const targetFileSize = file.size * (1 - percentageReduction);
-        console.log(targetFileSize)
+        console.log(targetFileSize);
         const maxSizeInMB = targetFileSize * 0.000001;
-        console.log(maxSizeInMB)
+        console.log(maxSizeInMB);
         this.compressImage(file, maxSizeInMB, type);
       }
     } else {
       // console.log(this._form.getFileSizeUnit(file.size))
-      this.handleUpload(event, type)
+      this.handleUpload(event, type);
     }
   }
 
@@ -1503,18 +1507,18 @@ Authorized Signature & Date:
       console.log(name, fileType);
       if (type === 'c_sign') {
         this.image4 = {
-          "file_type": fileType,
-          "file_base64": reader.result,
-          "file_name": name
-        }
+          file_type: fileType,
+          file_base64: reader.result,
+          file_name: name,
+        };
         return;
       }
       if (type === 'a_sign') {
         this.image5 = {
-          "file_type": fileType,
-          "file_base64": reader.result,
-          "file_name": name
-        }
+          file_type: fileType,
+          file_base64: reader.result,
+          file_name: name,
+        };
         return;
       }
     };
@@ -1522,50 +1526,130 @@ Authorized Signature & Date:
 
   compressImage(file: File, maxSizeInMB: number, type: any) {
     // console.log('Compressed')
-    this.ng2ImgMax.compressImage(file, maxSizeInMB)
-      .subscribe(compressedImage => {
-        console.log(compressedImage)
-        this.handleUpload(compressedImage, type)
+    this.ng2ImgMax.compressImage(file, maxSizeInMB).subscribe(
+      (compressedImage) => {
+        console.log(compressedImage);
+        this.handleUpload(compressedImage, type);
         // Do whatever you want to do with the compressed file, like send to server.
-      }, error => {
+      },
+      (error) => {
         console.log(error.reason);
-      });
+      }
+    );
   }
 
-  
-
   onSubmit() {
-    let payload = [];
-    payload.push(this.formData);
-    payload.push(this.feedbackForm.value);
-    console.log(payload);
-    this._form.loginSubject.next(payload);
+    // payload.push(this.formData);
+    // payload.push(this.feedbackForm.value);
+
+    let payload = {
+      email: this.formData.email,
+      surname: this.formData.surname,
+      mname: this.formData.mname,
+      fname: this.formData.fname,
+      dob: this.formData.dob,
+      occupation: this.formData.occupation,
+      raddress: this.formData.raddress,
+      phone_no: this.formData.phone_no,
+      bvn: this.formData.bvn,
+      identification: this.formData.identification,
+      identification_no: this.formData.identification_no,
+      j_surname: this.formData.j_surname,
+      j_mname: this.formData.j_mname,
+      j_fname: this.formData.j_fname,
+      j_dob: this.formData.j_dob,
+      j_occupation: this.formData.j_occupation,
+      j_address: this.formData.j_address,
+      j_email: this.formData.j_email,
+      j_phone_no: this.formData.j_phone_no,
+      j_bvn: this.formData.j_bvn,
+      j_identification: this.formData.j_identification,
+      j_identification_no: this.formData.j_identification_no,
+      j_relationship: this.formData.j_relationship,
+      c_company_name: this.formData.c_company_name,
+      j_rc_no: this.formData.j_rc_no,
+      c_dor: this.formData.c_dor,
+      c_residential: this.formData.c_residential,
+      c_bvn: this.formData.c_bvn,
+      investment: this.formData.investment,
+      tenure: this.formData.tenure,
+      // from 2
+      i_amount: this.feedbackForm.value.i_amount,
+      p_amount: this.feedbackForm.value.p_amount,
+      p_frequency: this.feedbackForm.value.p_frequency,
+      option: this.feedbackForm.value.option,
+      acc: this.feedbackForm.value.acc,
+      acc_name: this.feedbackForm.value.acc_name,
+      acc_no: this.feedbackForm.value.acc_no,
+      means: this.feedbackForm.value.means,
+      b_name: this.feedbackForm.value.b_name,
+      b_phone_no: this.feedbackForm.value.b_phone_no,
+      b_address: this.feedbackForm.value.b_address,
+      b_percentage: this.feedbackForm.value.b_percentage,
+      b_title: this.feedbackForm.value.b_title,
+      b2_name: this.feedbackForm.value.b2_name,
+      b2_phone_no: this.feedbackForm.value.b2_phone_no,
+      b2_address: this.feedbackForm.value.b2_address,
+      b2_percentage: this.feedbackForm.value.b2_percentage,
+      b3_name: this.feedbackForm.value.b3_name,
+      b3_phone_no: this.feedbackForm.value.b3_phone_no,
+      b3_address: this.feedbackForm.value.b3_address,
+      b3_percentage: this.feedbackForm.value.b3_percentage,
+      terms: this.feedbackForm.value.terms,
+    };
+    
+    this.image1 = this.formData.passport;
+    this.image2 = this.formData.j_signatory;
+    this.image3 = this.formData.j_passport;
+
+    let attach = {
+      passport: this.formData.passport,
+      j_signatory: this.formData.j_signatory,
+      j_passport: this.formData.j_passport,
+      c_sign: this.image4,
+      a_sign: this.image5,
+    };
+
+    // console.log(payload);
+    // console.log(attach);
+    // this._form.loginSubject.next(payload);
     // this._router.navigate(['afl-two']);
 
-    // let realPayload = {
-    //   subject: 'Addosser Finance Investment Form',
-    //   email_add: [
-    //     // {
-    //     //   email_address: 'peterayebhere@gmail.com',
-    //     //   full_name: 'Peter Eikore',
-    //     // },
-    //     {
-    //       email_address: 'ekundayoolumide1@gmail.com',
-    //       full_name: 'Ekundayo Olumide',
-    //     },
-    //     {
-    //       email_address: 'kachiagu99@gmail.com',
-    //       full_name: 'Kachi Olumide',
-    //     },
-    //   ],
-    //   message_body: this.getData(),
-    //   sender_name: 'AFL',
-    //   sender_mail: 'digiteam@addosser.com',
-    // };
-    //  console.log(realPayload)
-    // this._form.onSendMultipleMail(realPayload)
-    //   .subscribe((res) => {
-    //   console.log(res)
-    // })
+    let realPayload = {
+      subject: 'Addosser Finance Investment Form',
+      email_add: [
+        // {
+        //   email_address: 'peterayebhere@gmail.com',
+        //   full_name: 'Peter Eikore',
+        // },
+        {
+          email_address: 'ekundayoolumide1@gmail.com',
+          full_name: 'Ekundayo Olumide',
+        },
+        {
+          email_address: 'kachiagu99@gmail.com',
+          full_name: 'Kachi Olumide',
+        },
+      ],
+      message_body: this.getData(),
+      sender_name: 'AFL',
+      sender_mail: 'digiteam@addosser.com',
+      email_attachment: [
+        this.image1,
+        this.image2,
+        this.image3,
+        this.image4,
+        this.image5,
+      ],
+    };
+    // console.log(this.image1,
+    //   this.image2,
+    //   this.image3)
+    console.log(realPayload);
+    this._form.onSendMultipleMailAttachement(realPayload)
+    .subscribe((res) => {
+      console.log(res);
+    });
+    return
   }
 }

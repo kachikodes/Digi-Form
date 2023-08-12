@@ -33,6 +33,17 @@ export class FormService {
       .pipe();
   }
 
+  
+
+  onSendMultipleMailAttachement(payload: any) {
+    return this._http
+      .post<any>(
+        `http://intranet.atlas.ng/api/mail/send-multiple-with-multi-attachement`,
+        payload
+      )
+      .pipe();
+  }
+
   compressImage(file: File, maxSizeInMB: number) {
     this.ng2ImgMax.compressImage(file, maxSizeInMB)
       .subscribe(compressedImage => {
