@@ -27,7 +27,7 @@ export class FormService {
   onSendMultipleMail(payload: any) {
     return this._http
       .post<any>(
-        `http://intranet.atlas.ng/api/mail/send-multiple`,
+        `https://notification.atlas.ng/api/mail/send-multiple`,
         payload
       )
       .pipe();
@@ -38,7 +38,7 @@ export class FormService {
   onSendMultipleMailAttachement(payload: any) {
     return this._http
       .post<any>(
-        `http://intranet.atlas.ng/api/mail/send-multiple-with-multi-attachement`,
+        `https://notification.atlas.ng/api/mail/send-multiple-with-multi-attachment`,
         payload
       )
       .pipe();

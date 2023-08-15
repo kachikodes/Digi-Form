@@ -1610,18 +1610,16 @@ Authorized Signature & Date:
       a_sign: this.image5,
     };
 
+    
     // console.log(payload);
     // console.log(attach);
-    // this._form.loginSubject.next(payload);
+    this._form.loginSubject.next(payload);
     // this._router.navigate(['afl-two']);
 
     let realPayload = {
       subject: 'Addosser Finance Investment Form',
       email_add: [
-        // {
-        //   email_address: 'peterayebhere@gmail.com',
-        //   full_name: 'Peter Eikore',
-        // },
+       
         {
           email_address: 'ekundayoolumide1@gmail.com',
           full_name: 'Ekundayo Olumide',
@@ -1635,13 +1633,19 @@ Authorized Signature & Date:
       sender_name: 'AFL',
       sender_mail: 'digiteam@addosser.com',
       email_attachment: [
-        this.image1,
+        this.image1,  
         this.image2,
         this.image3,
         this.image4,
         this.image5,
       ],
     };
+
+    console.log(this.image1,
+                this.image2,
+                this.image3),
+
+    
     // console.log(this.image1,
     //   this.image2,
     //   this.image3)
