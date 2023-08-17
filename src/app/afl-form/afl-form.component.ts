@@ -148,12 +148,15 @@ export class AflFormComponent implements OnInit {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
+      let resul;
+      resul = reader.result;
+      
       console.log(name, fileType);
       if (type === 'passport') {
 
         this.image1 = {
           "file_type": fileType,
-          "file_base64": reader.result,
+          "file_base64": resul?.toString().split(',')[1],
           "file_name": name
         }
         return;
@@ -161,7 +164,7 @@ export class AflFormComponent implements OnInit {
       if (type === 'j_signatory') {
         this.image2 = {
           "file_type": fileType,
-          "file_base64": reader.result,
+          "file_base64": resul?.toString().split(',')[1],
           "file_name": name
         }
         return;
@@ -169,7 +172,7 @@ export class AflFormComponent implements OnInit {
       if (type === 'j_passport') {
         this.image3 = {
           "file_type": fileType,
-          "file_base64": reader.result,
+          "file_base64": resul?.toString().split(',')[1],
           "file_name": name
         }
         return;
@@ -177,7 +180,7 @@ export class AflFormComponent implements OnInit {
       if (type === 'c_sign') {
         this.image4 = {
           "file_type": fileType,
-          "file_base64": reader.result,
+          "file_base64": resul?.toString().split(',')[1],
           "file_name": name
         }
         return;
@@ -185,7 +188,7 @@ export class AflFormComponent implements OnInit {
       if (type === 'a_sign') {
         this.image5 = {
           "file_type": fileType,
-          "file_base64": reader.result,
+          "file_base64": resul?.toString().split(',')[1],
           "file_name": name
         }
         return;

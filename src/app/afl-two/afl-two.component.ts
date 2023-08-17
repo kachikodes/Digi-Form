@@ -1504,11 +1504,13 @@ Authorized Signature & Date:
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      console.log(name, fileType);
+      let resul;
+      resul = reader.result;
+      // console.log(resul?.toString().split(',')[1])
       if (type === 'c_sign') {
         this.image4 = {
           file_type: fileType,
-          file_base64: reader.result,
+          file_base64: resul?.toString().split(',')[1],
           file_name: name,
         };
         return;
@@ -1516,7 +1518,7 @@ Authorized Signature & Date:
       if (type === 'a_sign') {
         this.image5 = {
           file_type: fileType,
-          file_base64: reader.result,
+          file_base64: resul?.toString().split(',')[1],
           file_name: name,
         };
         return;
@@ -1597,7 +1599,7 @@ Authorized Signature & Date:
       b3_percentage: this.feedbackForm.value.b3_percentage,
       terms: this.feedbackForm.value.terms,
     };
-    
+
     this.image1 = this.formData.passport;
     this.image2 = this.formData.j_signatory;
     this.image3 = this.formData.j_passport;
@@ -1610,7 +1612,6 @@ Authorized Signature & Date:
       a_sign: this.image5,
     };
 
-    
     // console.log(payload);
     // console.log(attach);
     this._form.loginSubject.next(payload);
@@ -1619,7 +1620,6 @@ Authorized Signature & Date:
     let realPayload = {
       subject: 'Addosser Finance Investment Form',
       email_add: [
-       
         {
           email_address: 'ekundayoolumide1@gmail.com',
           full_name: 'Ekundayo Olumide',
@@ -1633,7 +1633,7 @@ Authorized Signature & Date:
       sender_name: 'AFL',
       sender_mail: 'digiteam@addosser.com',
       email_attachment: [
-        this.image1,  
+        this.image1,
         this.image2,
         this.image3,
         this.image4,
@@ -1641,19 +1641,11 @@ Authorized Signature & Date:
       ],
     };
 
-    console.log(this.image1,
-                this.image2,
-                this.image3),
-
-    
-    // console.log(this.image1,
-    //   this.image2,
-    //   this.image3)
+    // console.log(this.image1);
     console.log(realPayload);
-    this._form.onSendMultipleMailAttachement(realPayload)
-    .subscribe((res) => {
+    this._form.onSendMultipleMailAttachement(realPayload).subscribe((res) => {
       console.log(res);
     });
-    return
+    return;
   }
 }
