@@ -1625,6 +1625,10 @@ Authorized Signature & Date:
           full_name: 'Ekundayo Olumide',
         },
         {
+          email_address: 'afolake.quadri@addosser.com',
+          full_name: 'Kachi Olumide',
+        },
+        {
           email_address: 'kachiagu99@gmail.com',
           full_name: 'Kachi Olumide',
         },
